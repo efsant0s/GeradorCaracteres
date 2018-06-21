@@ -1,0 +1,334 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package geradorcaracteres;
+
+/**
+ *
+ * @author efsantos
+ */
+public class GeradorCaracteres {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static String geraCaractere(char letra) {
+        switch (letra) {
+            case 'A':
+                return "65";
+            case 'B':
+                return "66";
+            case 'C':
+                return "67";
+            case 'D':
+                return "68";
+            case 'E':
+                return "69";
+            case 'F':
+                return "70";
+            case 'G':
+                return "71";
+            case 'H':
+                return "72";
+            case 'I':
+                return "73";
+            case 'J':
+                return "74";
+            case 'K':
+                return "75";
+            case 'L':
+                return "76";
+            case 'M':
+                return "77";
+            case 'N':
+                return "78";
+            case 'O':
+                return "79";
+            case 'P':
+                return "80";
+            case 'Q':
+                return "81";
+            case 'R':
+                return "82";
+            case 'S':
+                return "83";
+            case 'T':
+                return "84";
+            case 'U':
+                return "85";
+            case 'V':
+                return "86";
+            case 'W':
+                return "87";
+            case 'X':
+                return "88";
+            case 'Y':
+                return "89";
+            case 'Z':
+                return "90";
+            case 'a':
+                return "97";
+            case 'b':
+                return "98";
+            case 'c':
+                return "99";
+            case 'd':
+                return "100";
+            case 'e':
+                return "101";
+            case 'f':
+                return "102";
+            case 'g':
+                return "103";
+            case 'h':
+                return "104";
+            case 'i':
+                return "105";
+            case 'j':
+                return "106";
+            case 'k':
+                return "107";
+            case 'l':
+                return "108";
+            case 'm':
+                return "109";
+            case 'n':
+                return "110";
+            case 'o':
+                return "111";
+            case 'p':
+                return "112";
+            case 'q':
+                return "113";
+            case 'r':
+                return "114";
+            case 's':
+                return "115";
+            case 't':
+                return "116";
+            case 'u':
+                return "117";
+            case 'v':
+                return "118";
+            case 'w':
+                return "119";
+            case 'x':
+                return "120";
+            case 'y':
+                return "121";
+            case 'z':
+                return "122";
+            case 'Ç':
+                return "128";
+            case 'ü':
+                return "129";
+            case 'é':
+                return "130";
+            case 'â':
+                return "131";
+            case 'ä':
+                return "132";
+            case 'à':
+                return "133";
+            case 'å':
+                return "134";
+            case 'ç':
+                return "135";
+            case 'ê':
+                return "136";
+            case 'ë':
+                return "137";
+            case 'è':
+                return "138";
+            case 'ï':
+                return "139";
+            case 'î':
+                return "140";
+            case 'ì':
+                return "141";
+            case 'Ä':
+                return "142";
+            case 'Å':
+                return "143";
+            case 'É':
+                return "144";
+            case 'æ':
+                return "145";
+            case 'Æ':
+                return "146";
+            case 'ô':
+                return "147";
+            case 'ö':
+                return "148";
+            case 'ò':
+                return "149";
+            case 'û':
+                return "150";
+            case 'ù':
+                return "151";
+            case 'ÿ':
+                return "152";
+            case 'Ö':
+                return "153";
+            case 'Ü':
+                return "154";
+            case '¢':
+                return "155";
+            case '£':
+                return "156";
+            case '¥':
+                return "157";
+            case '₧':
+                return "158";
+            case 'ƒ':
+                return "159";
+            case 'á':
+                return "160";
+            case 'í':
+                return "161";
+            case 'ó':
+                return "162";
+            case 'ú':
+                return "163";
+            case 'ñ':
+                return "164";
+            case 'Ñ':
+                return "165";
+            case 'À':
+                return "0192";
+            case 'Á':
+                return "0193";
+            case 'Â':
+                return "0194";
+            case 'Ã':
+                return "0195";
+            case 'È':
+                return "0200";
+
+            case 'Ê':
+                return "0202";
+            case 'Ë':
+                return "0203";
+            case 'Ì':
+                return "0204";
+            case 'Í':
+                return "0205";
+            case 'Î':
+                return "0206";
+            case 'Ï':
+                return "0207";
+            case 'Ð':
+                return "0208";
+
+            case 'Ò':
+                return "0210";
+            case 'Ó':
+                return "0211";
+            case 'Ô':
+                return "0212";
+            case 'Õ':
+                return "0213";
+
+            case '×':
+                return "0215";
+            case 'Ø':
+                return "0216";
+            case 'Ù':
+                return "0217";
+            case 'Ú':
+                return "0218";
+            case 'Û':
+                return "0219";
+
+            case 'Ý':
+                return "0221";
+            case 'Þ':
+                return "0222";
+            case 'ß':
+                return "0223";
+
+            case 'ã':
+                return "0227";
+
+            case 'ð':
+                return "0240";
+
+            case 'õ':
+                return "0245";
+
+            case '÷':
+                return "0247";
+            case 'ø':
+                return "0248";
+
+            case 'ý':
+                return "0253";
+            case ' ':
+                return "0160";
+            case '#':
+                return "35";
+            case '$':
+                return "36";
+            case '%':
+                return "37";
+            case '&':
+                return "38";
+            case '\'':
+                return "39";
+            case '(':
+                return "40";
+            case ')':
+                return "41";
+            case '*':
+                return "42";
+            case '+':
+                return "43";
+            case ',':
+                return "44";
+            case '-':
+                return "45";
+            case '.':
+                return "46";
+            case '/':
+                return "47";
+            case '0':
+                return "48";
+            case '1':
+                return "49";
+            case '2':
+                return "50";
+            case '3':
+                return "51";
+            case '4':
+                return "52";
+            case '5':
+                return "53";
+            case '6':
+                return "54";
+            case '7':
+                return "55";
+            case '8':
+                return "56";
+            case '9':
+                return "57";
+            case ':':
+                return "58";
+            case ';':
+                return "59";
+            case '<':
+                return "60";
+            case '=':
+                return "61";
+            case '>':
+                return "62";
+            case '?':
+                return "63";
+            case '@':
+                return "64";
+        }
+        return "Invalido";
+    }
+;
+}
