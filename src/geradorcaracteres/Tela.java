@@ -34,6 +34,7 @@ public class Tela extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
         jCheckBox1 = new javax.swing.JCheckBox();
+        reverterBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,19 +58,29 @@ public class Tela extends javax.swing.JFrame {
             }
         });
 
+        reverterBtn.setText("Reverter");
+        reverterBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reverterBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
-                    .addComponent(inputText, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
+                    .addComponent(inputText)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btGerar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox1)))
+                        .addComponent(jCheckBox1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(reverterBtn)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -82,8 +93,10 @@ public class Tela extends javax.swing.JFrame {
                     .addComponent(btGerar)
                     .addComponent(jCheckBox1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(reverterBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -108,6 +121,11 @@ public class Tela extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void reverterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reverterBtnActionPerformed
+       inputText.setText("");
+       reverteCodigo();
+    }//GEN-LAST:event_reverterBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +168,7 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton reverterBtn;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
  
@@ -166,5 +185,19 @@ public class Tela extends javax.swing.JFrame {
             }
             
         }
+    }
+        private void reverteCodigo() {
+        String[] campo = textArea.getText().split(",");
+        for (int i = 0; i < campo.length; i++) {
+            boolean ultimo = campo[i].endsWith(".");
+            if (ultimo) {
+                campo[i] = campo[i].replaceAll("[.]", "");
+            }
+            inputText.setText(inputText.getText() + GeradorCaracteres.retornaCaracter(campo[i].trim()));
+            if (ultimo) {
+                inputText.setText(inputText.getText() + ".");
+            }
+        }
+
     }
 }
