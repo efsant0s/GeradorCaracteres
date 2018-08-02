@@ -335,6 +335,8 @@ public class GeradorCaracteres {
     public static String retornaCaracter(String numero) {
 
         switch (numero) {
+            case "32":
+                return " ";
             case "65":
                 return "A";
             case "66":
@@ -638,7 +640,7 @@ public class GeradorCaracteres {
             case "64":
                 return "@";
             default:
-                return "invalido";
+                return numero;
         }
     }
 
