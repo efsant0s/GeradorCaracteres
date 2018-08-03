@@ -267,7 +267,7 @@ public class GeradorCaracteres {
             case 'ý':
                 return "0253";
             case ' ':
-                return "0160";
+                return "32";
             case '#':
                 return "35";
             case '$':
