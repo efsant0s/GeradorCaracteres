@@ -14,7 +14,7 @@ public class GeradorCaracteres {
     /**
      * @param args the command line arguments
      */
-    //teste
+    //testeeeeee
     public static String geraCaractere(char letra) {
         switch (letra) {
             case 'A':
