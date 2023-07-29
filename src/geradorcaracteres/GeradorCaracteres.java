@@ -290,6 +290,10 @@ public class GeradorCaracteres {
                 return "44";
             case '-':
                 return "45";
+            case '_':
+                return "95";
+            case '!':
+                return "33";
             case '.':
                 return "46";
             case '/':
@@ -389,6 +393,10 @@ public class GeradorCaracteres {
                 return "Y";
             case "90":
                 return "Z";
+            case "95":
+                return "_";
+            case "33":
+                return "!";
             case "97":
                 return "a";
             case "98":
